@@ -1,19 +1,18 @@
 #include "main.h"
 /**
- * printsomething -prints "something"
+ * printsomething -prints "_putchar"
  *
  * Return: 0
  */
 void printsomething(void)
 {
-	_putchar('s');
-	_putchar('o');
-	_putchar('m');
-	_putchar('e');
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
 	_putchar('t');
+	_putchar('c');
 	_putchar('h');
-	_putchar('i');
-	_putchar('n');
-	_putchar('g');
+	_putchar('a');
+	_putchar('r');
 	_putchar('\n');
 }
