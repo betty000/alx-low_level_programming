@@ -8,15 +8,12 @@ int main(void)
 {
 	int a, b;
 
-	sum = 0;
 
 	for (a = 1; a < 1024; a++)
 	{
 		if ((a % 3 == 0) || (a % 5 == 0))
-		{
-			sum += 3;
-		}
+			b += 3;
 	}
-	printf("%d\n", sum);
+	printf("%d\n", b);
 	return (0);
 }
