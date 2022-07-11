@@ -1,23 +1,20 @@
 #include "main.h"
 /**
  * jack_bauer - prints 24 hours
- * @void: first int to add
  */
 void jack_bauer(void)
 {
-	int hrs;
+	int i, j;
 
-	int mins;
-
-	for (hrs = 0; hrs < 24; hrs++)
+	for (i = 0; i < 24; i++)
 	{
-		for (mins = 0; mins < 60; mins++)
+		for (j = 0; j < 60; j++)
 		{
-			_putchar((hrs / 10)  + '0');
-			_putchar((hrs % 10) + '0');
+			_putchar((i / 10)  + '0');
+			_putchar((i % 10) + '0');
 			_putchar(':');
-			_putchar((mins / 10)  + '0');
-			_putchar((mins % 10) + '0');
+			_putchar((j / 10)  + '0');
+			_putchar((j % 10) + '0');
 			_putchar(('\n');
 		}
 	}
