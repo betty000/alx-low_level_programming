@@ -1,10 +1,13 @@
 #include "main.h"
 /**
  * jack_bauer - prints 24 hours
+ * @void: first int to add
  */
 void jack_bauer(void)
 {
-	int hrs, mins;
+	int hrs;
+
+	int mins;
 
 	for (hrs = 0; hrs < 24; hrs++)
 	{
