@@ -12,7 +12,7 @@ int main(void)
 	{
 		for (j = 0; j <= 99; j++)
 		{
-			for ( m = 0; m<= 98 m++)
+			for ( m = 0; m <= 98; m++)
 			{
 				if (i > j && m > i)
 				{
@@ -24,7 +24,7 @@ int main(void)
 					putchar(' ');
 					putchar(m / 10 + 48);
 					putchar(m % 10 + 48);
-					if (m != 98; i != 99 || j != 100)
+					if (m != 98 || i != 99 || j != 100)
 					{
 						putchar(',');
 						putchar(' ');
