@@ -18,7 +18,7 @@ void print_diagonal(int n)
 		{
 			if (x > 1)
 			{
-				for (num_lines = 1; num_lines <= row - 1; num_lines++)
+				for (y = 1; y <= x - 1; y++)
 				{
 					_putchar(' ');
 				}
