@@ -2,27 +2,31 @@
 
 /**
  * fizz_buzz - printing to 100
- * Description: prints FizzBuzz
+ * Description: prints FizzBuziz
  * Return: void
  */
 int main(void)
 {
 	int x;
 
-	for (x = 1; x <= 100; x++)
+	while (x++ < 100)
 	{
 		if ((x % 3 == 0) && (n % 5 == 0))
 			printf("FizzBuzz");
-		else if(x % 5 == 0)
+		else if((x % 5) == 0)
 			printf("Buzz");
-		else if (x % 3 == 0)
+		else if ((x % 3) == 0)
 			printf("Fizz");
+		else if ((x % 5) == 0)
+		{
+			if (x != 100)
+				printf("Buzz ");
 		else
-			printf("%i", x);
-		if (x < 100)
-			printf(" ");
+			printf("Buzz");
+		}
 		else
-			printf("\n");
+			printf("%d ", x);
 	}
+	printf("\n");
 	return (0);
 }
