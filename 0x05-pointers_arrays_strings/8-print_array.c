@@ -5,15 +5,24 @@
  * print_array -  function that prints n elements
  * @a: in to check
  * @n: in to check
- * Return: 0
  */
 void print_array(int *a, int n)
 {
-	int x;
+	int i;
 
-	for (x = 0; x < n; x++)
-		if (x != n - 1)
-			printf("%d, ", a[x]);
-	else
-		printf("%d", a[x]);
+	i = 0;
+	if (n > 0)
+	{
+		printf("%d", a[i]);
+		i++;
+		n--;
+	}
+	for (; n > 0; n--)
+	{
+		printf(", %d", a[i]);
+		i++;
+	}
+	printf("\n");
+
 }
+
