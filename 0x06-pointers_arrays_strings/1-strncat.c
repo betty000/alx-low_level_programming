@@ -8,7 +8,7 @@
  * @n: integer
  * Return: a string
  */
-char *_strncat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int x = 0;
 	int y = 0;
