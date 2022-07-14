@@ -9,7 +9,7 @@ int main(void)
 	int i;
 
 	i = 0;
-	printif(positive_or_negative(i));
+	printf(positive_or_negative(i));
 
 	return (0);
 }
