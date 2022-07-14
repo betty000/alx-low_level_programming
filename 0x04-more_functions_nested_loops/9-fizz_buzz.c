@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * fizz_buzz - printing to 100
+ * main - entry point
+ * Description: printing to 100
  * Return: 0
  */
 int main(void)
@@ -12,13 +13,13 @@ int main(void)
 	{
 		if ((x % 3 == 0) && (x % 5 == 0))
 			printf("FizzBuzz");
-		else if((x % 5) == 0)
+		else if ((x % 5) == 0)
 			printf("Buzz");
 		else if ((x % 3) == 0)
 			printf("Fizz");
 		else
-			 printf("%i", x);
-		if (x < 100)	
+			printf("%i", x);
+		if (x < 100)
 			printf(" ");
 		else
 			printf("\n");
