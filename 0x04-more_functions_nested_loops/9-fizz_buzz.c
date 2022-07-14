@@ -2,8 +2,7 @@
 
 /**
  * fizz_buzz - printing to 100
- * Description: prints FizzBuziz
- * Return: void
+ * Return: 0
  */
 int main(void)
 {
@@ -11,7 +10,7 @@ int main(void)
 
 	while (x++ < 100)
 	{
-		if ((x % 3 == 0) && (n % 5 == 0))
+		if ((x % 3 == 0) && (x % 5 == 0))
 			printf("FizzBuzz");
 		else if((x % 5) == 0)
 			printf("Buzz");
