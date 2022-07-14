@@ -5,9 +5,10 @@
  * _strncat - this is a function strcat
  * @dest: first parameter
  * @src: second parameter
+ * @n: integer
  * Return: a string
  */
-char *_strncat(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
 	int x = 0;
 	int y = 0;
