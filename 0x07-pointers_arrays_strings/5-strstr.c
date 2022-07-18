@@ -8,19 +8,19 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int length_needle = 0, i = 0, j, tmpi, checker;
+	unsigned int length_needle = 0, i = 0, j, tmp, checker;
 
 	while (needle[length_needle] != '\0')
 		length_needle++;
 	while (haystack[i] != '\0')
 	{
-		tempi = i;
+		tmp = i;
 		checker = 0;
 		for (j = 0; j < length_needle; j++)
 		{
-			if (haystack[tmpi] == needle[j])
+			if (haystack[tmp] == needle[j])
 			{
-				tmpi++;
+				tmp++;
 				checker++;
 			}
 		}
