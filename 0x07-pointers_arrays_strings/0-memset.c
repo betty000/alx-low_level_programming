@@ -1,7 +1,7 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _memset - fills memory with constant byte.
+ * _memset - fills memory with a constant byte
  * @s: array of char
  * @b: array of chat
  * @n: number of bytes
