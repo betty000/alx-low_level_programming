@@ -11,3 +11,4 @@ int is_prime(int n, int divisor);
 int _strlen_recursion(char *s);
 int p1(char *s, int l);
 int is_palindrome(char *s);
+int wildcmp(char *s1, char *s2);
