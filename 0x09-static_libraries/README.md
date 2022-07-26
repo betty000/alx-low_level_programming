@@ -1,4 +1,4 @@
-# 0x09. C - Static libraries
+### 0x09. C - Static libraries
 In the C programming language, a static library is a compiled object file containing all symbols required by the main program to operate (functions, variables etc.) as opposed to having to pull in separate entities. Static libraries aren’t loaded by the compiler at run-time; only the executable file need be loaded.
 ## libmy.a, main.h
 Create the static library libmy.a containing all the functions listed below:
@@ -25,7 +25,7 @@ char *_strcpy(char *dest, char *src);
 
 int _atoi(char *s);
 
-char *_strcat(char *dest, char *src);
+char *_stircat(char *dest, char *src);
 
 char *_strncat(char *dest, char *src, int n);
 
