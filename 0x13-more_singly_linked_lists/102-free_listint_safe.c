@@ -1,53 +1,49 @@
-#include <stdlib.h>
 #include "lists.h"
+#include <stdlib.h>
 
 /**
- * free_listint_safe - Free a list that may or may not loop,
- * set start of list to NULL
- * @h: Pointer to pointer to the start of the list
- * Return: Size of the list that has been freed
+ * free_listint_safe - function that free a listint_t linked list
+ * @h: pointer to the beginning of linked list
+ * Return: the number of nodes in the list
  */
+
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *killnode;
-	listint_t *current;
-	listadd_t *headadd;
-	listadd_t *checker;
-	size_t count;
+	int i, flag = 0;
+	listint_t *slow, *fast, *delete;
 
-	count = 0;
-	current = *h;
-	headadd = NULL;
-	if (h != NULL)
+	if (!h)
+		return (0);
+
+	for (i = 0; *h && !flag; i++)
 	{
-		while (current != NULL)
+		slow = *h;
+		fast = (**h).next;
+		while (slow != fast)
 		{
-			checker = headadd;
-			while (checker != NULL)
-			{
-				if (current == checker->address)
-				{
-					free(current);
-					free_listadd(headadd);
-					/*headadd = NULL;*/
-					 *h = NULL;
-					return (count);
-				}
-				checker = checker->next;
-			}
-			killnode = current;
-			if (add_nodeaddress(&headadd, current) == NULL)
-			{
-				free_listadd(headadd);
-				exit(98);
-			}
-			current = current->next;
-			free(killnode);
-			count++;
+			if (slow)
+				slow = (*slow).next;
+			if (fast)
+				fast = (*fast).next;
+			if (fast == *h)
+				flag = 1;
+			if (fast)
+				fast = (*fast).next;
+			if (fast == *h)
+				flag = 1;
 		}
-		free_listadd(headadd);
-		/*headadd = NULL;*/
-		*h = NULL;
+		delete = *h;
+		*h = (**h).next;
+		free(delete);
 	}
-	return (count);
+
+	while (flag && *h != fast)
+	{
+		delete = *h;
+		i++;
+		*h = (**h).next;
+		free(delete);
+	}
+	*h = NULL;
+	return (i);
 }
