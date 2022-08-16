@@ -1,32 +1,40 @@
 #include "lists.h"
 
 /**
- * free_listint_safe - mas listas enlazadas
- * @h: Doble puntero asignado
- * Return: i
+ * free_listint_safe - frees a linked list
+ * @h: pointer to the first node in the linked list
+ *
+ * Return: number of elements in the freed list
  */
 size_t free_listint_safe(listint_t **h)
 {
+	size_t len = 0;
+	int diff;
 	listint_t *temp;
-	size_t i = 0;
 
-	temp = *h;
-	if (h == NULL)
-		return (i);
-	while (temp)
+	if (!h || !*h)
+		return (0);
+
+	while (*h)
 	{
-		if (temp <= temp->next)
+		diff = *h - (*h)->next;
+		if (diff > 0)
 		{
-			free(temp);
-			i++;
+			temp = (*h)->next;
+			free(*h);
+			*h = temp;
+			len++;
+		}
+		else
+		{
+			free(*h);
+			*h = NULL;
+			len++;
 			break;
 		}
-
-		*h = temp->next;
-		free(temp);
-		temp = *h;
-		i++;
 	}
+
 	*h = NULL;
-	return (i);
+
+	return (len);
 }
